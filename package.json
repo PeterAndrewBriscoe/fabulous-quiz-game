@@ -5,8 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "coverage": "jest --silent",
     "dev": "webpack serve --mode development --config config/webpack.config.dev.js",
     "build": "webpack --config config/webpack.config.production.js"
+  },
+  
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/actions/"
+    ]
   },
   "repository": {
     "type": "git",
@@ -23,9 +35,14 @@
     "@babel/plugin-transform-runtime": "^7.16.8",
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-react": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "babel-jest": "^27.4.6",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
     "style-loader": "^3.3.1",
     "webpack": "^5.66.0",
     "webpack-dev-server": "^4.7.3"
