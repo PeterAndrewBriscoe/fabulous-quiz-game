@@ -1,0 +1,33 @@
+{
+  "name": "fabulous-quiz-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack serve --mode development --config config/webpack.config.dev.js",
+    "build": "webpack --config config/webpack.config.production.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterAndrewBriscoe/fabulous-quiz-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterAndrewBriscoe/fabulous-quiz-game/issues"
+  },
+  "homepage": "https://github.com/PeterAndrewBriscoe/fabulous-quiz-game#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.66.0",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
